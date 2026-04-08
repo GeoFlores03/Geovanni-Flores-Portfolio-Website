@@ -1,0 +1,498 @@
+---
+title: "Quarto Workshop Series: <span style='color: #b52b4c;'><br>Building a Free Professional Portfolio Website</span>"
+author: "Center for Customer Insights and Digital Marketing"
+institute: "Cal Poly Pomona"
+date: "03/25/2025"
+date-format: "M/D/YYYY"
+format:
+  revealjs:
+    center: false
+    logo: "logos/ccidm-cpp logo.png"
+    theme: [default, theme.scss]
+    slide-number: true
+    toc: true
+    toc-depth: 1
+    code-link: true
+    link-external-newwindow: true
+    #chalkboard: true #cannot use with self-contained
+    embed-resources: true
+    multiplex: true
+    width: 1600
+    height: 900
+    margin: 0.1
+    minScale: 0.2
+    maxScale: 2.0
+    scrollable: true
+execute: 
+  freeze: auto
+---
+
+
+# Greetings and Introduction of the Team
+
+-   Jae Jung, Ph.D., Professor of Marketing, Moderator and Presenter
+-   Jarrod Griffin, Master's Student, Presenter
+
+# Announcement
+
+-   The workshop will be Recorded and will be available later
+-   Quarto Website and Resume template available at <https://github.com/CCIDM/portfolio-website-template>
+-   Workshop slide materials available at <https://github.com/CCIDM/portfolio-website>
+-   Live slides available at <https://ccidm.github.io/portfolio-website>
+-   Questions
+
+# Overall Agenda
+
+::: incremental
+1.  Greetings and Introduction to Presenters 
+2.  Expected Learning Outcomes & Agenda
+3.  Quick Demo: Deployment to `quarto-pub` (15 min)
+4.  Setting Up GitHub Account & Desktop (10 min)
+5.  Building a Portfolio Website on `github-pages` (15 min)
+6.  Integrating Existing Quarto Projects into the website (10 min)
+7.  Customizing Website Aesthetics with SCSS (15 min)
+8.  Q&A (5 min)
+:::
+
+
+
+# Expected Learning outcomes:
+
+After taking this workshop, participants should be able to:
+
+::: {.medium-small .incremental}
+1.  Build a professional Quarto website to showcase your portfolio, skills, and personal brand online. 
+2.  Integrate existing Quarto projects into your website for cohesive presentation of analyses, reports, interactive visualizations, and dashboards. 
+3.  Customize your website layout and appearance with SCSS and custom themes to enhance visual appeal. 
+4.  Deploy your website online using GitHub Pages for easy accessibility and professional visibility. 
+5.  Create a resume in R using the Vitae package. 
+:::
+
+# Quick Demo: Deployment to `quarto-pub`
+
+## Demo Website
+
+- Farm Store and Penguins
+    -  `quarto-pub`:  <https://jmjung.quarto.pub/welcome-to-farm-store---dmc/>
+    -  `github-pages`: <https://jaejungca.github.io/dmc/>
+    -  `github-repo`: <https://github.com/jaejungca/dmc>
+- **Today's Demo website**:
+    -  `quarto-pub`: <https://jmjung.quarto.pub/website-quarto-pub/>
+        
+
+
+## Quarto-Pub Deployment Walkthrough 
+
+**Step-by-Step Demo:**
+
+. . .
+
+### 1. Create a New Directory:
+
+On the menu, go to
+
+- **File** > 
+    - **New Project** > 
+        - **Quarto Website**:
+            - select directory
+            - add subdirectory name: `website-quarto-pub`
+
+- A website **`template`** will be created with the following files:
+    - index.qmd
+    - about.qmd
+    - _quarto.yml
+    - styles.css
+
+---
+
+### 2. Edit the `index.qmd` file
+
+1. YAML Header
+
+```yml
+---
+title: "John Doe"
+about:
+  template: jolla
+  image: drjung-small.PNG
+  links: 
+    - icon: github
+      text: Github
+      href: https://github.com/youracount/
+    - icon: twitter
+      text: twitter
+      href: https://x.com/youraccount
+---
+```
+2. Add something about you
+    - headshot image file
+    - short bio
+    - Highlights
+    - social media links
+
+---
+
+### 3. Create a new quarto file for a `project`
+
+
+- We will use the `Farm Store and Penguins` project qmd file 
+    - Copy codes from the project's `index.qmd` file and paste it into the new file called, **`project.qmd`**
+    - Copy and paste support files for the project to the `website-quarto-pub` folder.
+        - four the graphics file
+        - reference.bib
+
+
+---
+
+### 4. Organize your website structure with the `_quarto.yml` file: 
+   
+```yml
+   project:
+  type: website
+
+website:
+  title: "subdirectory Name"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: project.qmd
+        text: Projects
+      - href: about.qmd
+        text: Blogs
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+editor: visual
+execute: 
+  freeze: auto
+```
+
+---
+
+::: {.fragment .fade-in-then-semi-out}
+### 5. Render Locally:
+
+
+-   Preview your site by going to 
+    - `build` > `Render Website`
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+### 6. Publish to `quarto-pub` 
+
+-   Under `Terminal` tab, type the following
+
+   ```terminal
+   quarto publish quarto-pub
+   ```
+-   Follow the instructions on the `Terminal`
+:::
+
+## Overview {visibility="hidden"}
+
+In this section we will deploy a basic Quarto website on `quarto-Pub`.  
+  
+**Key Points:**
+
+- **Project Setup:** Create a new Quarto project.
+
+- **YAML Header:** Set up metadata (title, author, date) and social media links.
+  
+## Example YAML Header {visibility="hidden"}
+
+```yaml
+---
+title: "My Portfolio"
+author: "Your Name"
+date: "2025-03-22"
+social:
+  - icon: github
+    href: "https://github.com/yourusername"
+  - icon: twitter
+    href: "https://twitter.com/yourusername"
+---
+```
+
+## Quarto Pub Deployment Walkthrough {visibility="hidden"}
+
+**Step-by-Step Demo:**
+
+1. **Create a New Directory:**  
+   New Project > Quarto Website
+   
+2. **Edit the YAML Header:**  
+   Add your site title, author info, date, and social links.
+   
+3. **Render Locally:**  
+   Preview your site by rendering the .qmd document.
+   
+4. **Publish to Quarto Pub:**  
+   Click "Publish" in RStudio to deploy your site on Quarto Pub.
+
+
+
+# Setting Up GitHub & GitHub Desktop
+
+## Why GitHub?
+
+- **Version Control:** Track changes and collaborate.
+- **Hosting:** Use GitHub Pages to host your website for free and even connect your own domain.
+
+## Account Setup
+
+1. **Sign Up at GitHub:**  
+   Visit [github.com](https://github.com) to create your account.
+2. **Configure Your Profile:**  
+   Set up your bio, profile picture, and security settings.
+3. **Create a Repository:**  
+   Create a repository named `portfolio-website` or similar.
+   
+
+## Using GitHub Desktop
+
+**Installation & Workflow:**
+
+1. **Download GitHub Desktop:**  
+   Go to [desktop.github.com](https://desktop.github.com) and install.
+2. **Clone the Repository:**  
+   Clone the repository locally and set up directory.
+3. **Move Files into Repo Folder:**  
+   Move the existing .qmd or .html files into the repo folder.
+3. **Commit & Push Changes:**  
+   Use GitHub Desktop’s interface to manage your commits and pushes.
+
+## Command Line Alternative
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/portfolio-website.git
+
+# Navigate to the project folder
+cd portfolio-website
+
+# Stage changes, commit, and push
+git add .
+git commit -m "Initial commit of portfolio website"
+git push origin main
+```
+
+## Best Practices for GitHub Commits & Pushes{.medium-small}
+
+:::{.large-small}
+- **Clear Commit Messages:**  
+    - Use descriptive, concise messages in the imperative mood (e.g., "Add feature", "Fix bug").
+
+- **Atomic Commits:** 
+    - Commit small, logical changes to keep history clean.
+
+- **Use Branches:**  
+    - Develop new features or fixes in separate branches.
+
+- **Review Changes:**  
+    - Check diffs before committing to catch errors early.
+
+- **Push Regularly:**  
+    - Frequently push to remote repositories to back up your work and ease collaboration.
+
+- **Avoid Sensitive Data:**  
+    - Utilize a `.gitignore` file to exclude credentials and temporary files.
+    
+:::
+
+# Building a Portfolio Website on GitHub Pages
+
+## Site Structure
+
+A well-organized portfolio website might include the following pages:
+
+- **Home Page:**  
+  An introduction and personal statement.
+
+- **Marketing Analytics:**  
+  A blog-like page showcasing your work in data-driven marketing, including case studies, data visualizations, and performance metrics.
+
+- **Strategic Marketing:**  
+  A dedicated section highlighting your expertise in marketing strategy, brand development, and market positioning.
+
+- **Resume:**  
+  A page featuring your CV, built using Markdown and the Vitae package.
+
+## Example Folder Structure
+
+```
+portfolio-website/
+├── index.qmd                # Home page: Introduction & personal statement
+├── marketing-analytics.qmd  # Marketing Analytics: Data-driven marketing projects & case studies
+├── strategic-marketing.qmd  # Strategic Marketing: Domain expertise & brand strategy insights
+└── resume.qmd               # Resume: Your CV (Markdown/Vitae)
+```
+
+# Creating a Resume with the Vitae Package {.scrollable}
+
+**Overview:**
+
+- **Vitae** is an R package for generating professional resumes and CVs using R Markdown and Quarto.
+
+- It offers several customizable templates to showcase your skills and experience.
+
+**Steps to Get Started:**
+
+1. **Install Vitae:**  
+   Run the following in R:
+   ```r
+   install.packages("vitae")
+   ```
+
+2. **Choose a Template:**  
+   Vitae includes templates like `awesome-cv` and `moderncv`.
+
+---
+
+3. **Set Up Your Quarto Document:**  
+   Use a YAML header to specify the Vitae template. For example:
+   ```yaml
+   ---
+name: Jarrod
+surname: Griffin
+position: "Student - Marketing Analytics"
+www: jarrodgriffin.com
+email: "jarrod@jarrodgriffin.com"
+github: jsgriffin96
+linkedin: jarrod-griffin
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::latexcv:
+    theme: classic
+   ---
+   ```
+
+4. **Customize Your Content:**  
+   Add sections for education, work experience, skills, etc., using Markdown.
+
+5. **Render Your Resume:**  
+   Render the document to generate a polished resume.
+
+
+
+
+# Integrating Existing Quarto Projects
+
+## Embedding Interactive Content
+
+You can enhance your portfolio by integrating:
+
+- **Shiny Apps:** Embed interactive apps.
+
+- **HTML Documents:** Showcase outputs or reports.
+
+- **Listings:** Organize multiple projects.
+
+### Example: Embedding a Shiny App
+
+```html
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+  <iframe src="https://yourshinyapp.url" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+</div>
+```
+
+## Document Listings: The Basics
+
+- **Overview:**  
+  Auto-generate page content from a list of Quarto documents—ideal for blogs and navigation.
+
+- **Enabling Listings:**  
+  Add this to your document’s YAML front matter:
+  ```yaml
+  ---
+  listing: 
+    contents: workshops
+    type: grid
+    categories: true
+    sort: 
+      - "title desc"
+  ---
+  ```
+
+- **Key Options:**  
+  - **contents:** Specify which files to include (e.g., `contents: posts`)
+  - **sort:** Order items (e.g., `sort: "date desc"`)
+  - **type:** Choose a layout: **default**, **table**, or **grid**
+
+# Configuring Your HTML for GitHub Pages
+
+**Deployment Steps:**
+
+1. **Render Your Quarto Project:**  
+    - Include your key pages (index, projects, resume. etc).
+
+2. **Move HTML into repo folder**  
+    - Move HTML output from rendering Quarto into repo folder.
+
+3. **Push to GitHub:**  
+    - Use GitHub Desktop or command line.
+
+4. **Enable GitHub Pages:**  
+    - In your repository settings, enable GitHub Pages to serve the site.
+
+
+# Customizing Website Aesthetics with SCSS
+
+## Creating a Custom SCSS File
+
+1. **Add a File:**  
+   Create `styles.scss` in your project.
+2. **Override Theme Defaults:**  
+   Customize fonts, colors, and spacing.
+
+### Sample SCSS Code
+
+```scss
+/*-- scss:rules --*/
+
+/* Global Body Styles */
+body {
+  font-family: $font-body;
+  color: $black;
+  background-color: $eggshell;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+  font-weight: bold;
+}
+```
+
+
+# Audience Customization Ideas
+
+**We Want Your Input!**
+
+- What parts of the portfolio website would you like to see customized?
+- Which design elements (e.g., colors, fonts, layouts) interest you most?
+- Are there any additional features you’d like to explore?
+
+Share your ideas, and let’s discuss how to bring your vision to life!
+
+
+# Q&A
+
+- Open the floor for any questions.
+- Address common issues (YAML syntax errors, GitHub push problems, SCSS overrides).
+- Share additional resources:
+  - [Quarto Documentation](https://quarto.org)
+  - [GitHub Pages Help](https://docs.github.com/en/pages)
+  - [Vitae Package Documentation](https://vitae.rbind.io)
+
+# Thank You!
+
+Stay connected and keep building your portfolio. 
