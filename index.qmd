@@ -1,0 +1,44 @@
+---
+title: "Hello and Welcome, I'm Geovanni Flores!"
+image: Images/Project.jpeg
+about:
+  template: trestles
+  image-shape: round
+  image-width: 15em
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/geovanni-flores-9ab279307/
+    - icon: github
+      text: Github
+      href: https://github.com/GeoFlores03
+    - icon: envelope
+      text: Email
+      href: mailto:geovanniflores866@gmail.com
+---
+
+## About Me
+
+Currently I am a student at **Cal Poly Pomona** perusing my **bachelors degree** in business, majoring in marketing. I have gained experience through **social media management**, and now newly learned **data analysis**.
+
+**Fun fact**: I have a passion in traveling and taking photos!
+
+## Skills
+
+-   Social Media Management (Instagram, TikTok, YouTube)
+
+-   R (Programming)
+
+-   Efficient in Microsoft (Word, PowerPoint and Excel)
+
+-   Canva
+
+## Education
+
+**Associate's Degree** \| Rio Hondo College, 2021 - 2024
+
+**Bachelor's Degree** \| Cal Poly Pomona, 2024 - 2026 (Projected)
+
+## Let's Connect
+
+[Email me here](mailto:geovanniflores866@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/geovanni-flores-9ab279307/).

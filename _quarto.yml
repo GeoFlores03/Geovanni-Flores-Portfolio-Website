@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "Geovanni-Flores-Portfolio-Website"
+  navbar:
+    background: "#0038A8"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: Marketing-Projects.qmd
+        text: Marketing Projects
+      - href: Dashboard.qmd
+        text: Dashboard
+      - href: Analytics.qmd
+        text: Analytics
+      - href: Presentations.qmd
+        text: Presentations
+        
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual

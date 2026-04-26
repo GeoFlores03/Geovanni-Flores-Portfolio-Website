@@ -1,0 +1,97 @@
+---
+title: "Dashboard"
+format: dashboard
+---
+
+## Row {height=25%}
+
+```{r}
+#| content: valuebox
+#| title: "Total Ad Spend"
+list(icon = "cash-stack", color = "#4a90d9", value = "$48.2K")
+```
+
+```{r}
+#| content: valuebox
+#| title: "Total Revenue"
+list(icon = "graph-up-arrow", color = "#3dbf8f", value = "$183.6K")
+```
+
+```{r}
+#| content: valuebox
+#| title: "Blended ROAS"
+list(icon = "bullseye", color = "#e8a838", value = "3.81x")
+```
+
+```{r}
+#| content: valuebox
+#| title: "Best Channel"
+list(icon = "envelope-fill", color = "#7b6bd6", value = "Email 9.1x")
+```
+
+## Row {height=10%}
+
+```{r}
+#| echo: false
+cat("")
+```
+
+::: {.card}
+**Q1 2026 Campaign Overview** — This dashboard analyzes digital marketing performance across Google Ads, Meta, Email, and SEO for Q1 2026. Total spend of $48.2K generated $183.6K in revenue, a blended ROAS of 3.81x. Email was the standout channel with a 9.1x return despite receiving only $4K in spend, while Google Ads drove the highest total revenue at $74.2K. These findings suggest reallocating budget toward email and optimizing Meta creative to improve overall portfolio efficiency.
+:::
+
+## Row {height=32%}
+
+```{r}
+#| title: "Monthly Spend vs Revenue — Revenue grew faster than spend each month, widening the gap through March."
+months  <- c("Jan", "Feb", "Mar")
+revenue <- c(54200, 61400, 68000)
+spend   <- c(14800, 15900, 17500)
+plot(1:3, revenue, type="b", col="#4a90d9", lwd=2.5, pch=19,
+     ylim=c(0,75000), axes=FALSE, xlab="", ylab="")
+lines(1:3, spend, col="#7b6bd6", lwd=2.5, type="b", pch=19)
+axis(1, at=1:3, labels=months, cex.axis=0.9)
+axis(2, at=seq(0,70000,10000), labels=paste0("$",seq(0,70,10),"K"), las=1, cex.axis=0.85)
+grid(col="grey90", lty=1); box(col="grey90")
+legend("topleft", legend=c("Revenue","Ad Spend"),
+       col=c("#4a90d9","#7b6bd6"), lwd=2, pch=19, bty="n", cex=0.85)
+```
+
+```{r}
+#| title: "Revenue by Channel — Google Ads led in total revenue, but Email delivered the highest efficiency."
+rev_vals <- c(74200, 52800, 36400, 20200)
+chans    <- c("Google Ads","Meta Ads","Email","SEO")
+cols     <- c("#4a90d9","#7b6bd6","#3dbf8f","#aaaaaa")
+bp <- barplot(rev_vals, names.arg=chans, col=cols, border=NA,
+              ylim=c(0,90000), axes=FALSE, cex.names=0.85)
+axis(2, at=seq(0,80000,20000), labels=paste0("$",seq(0,80,20),"K"), las=1, cex.axis=0.85)
+grid(nx=NA, ny=NULL, col="grey90", lty=1); box(col="grey90")
+text(bp, rev_vals+2000, paste0("$",rev_vals/1000,"K"), cex=0.8, col="grey40")
+```
+
+## Row {height=33%}
+
+```{r}
+#| title: "CTR by Channel — Email's 24.1% CTR far outpaced paid channels, reflecting strong list quality."
+ctr  <- c(24.1, 5.2, 3.8, 2.9)
+labs <- c("Email","Google","Meta","SEO")
+cols <- c("#3dbf8f","#4a90d9","#7b6bd6","#aaaaaa")
+bp3 <- barplot(ctr, names.arg=labs, col=cols, border=NA,
+               ylim=c(0,28), axes=FALSE, cex.names=0.85)
+axis(2, at=seq(0,25,5), labels=paste0(seq(0,25,5),"%"), las=1, cex.axis=0.85)
+grid(nx=NA, ny=NULL, col="grey90", lty=1); box(col="grey90")
+text(bp3, ctr+0.8, paste0(ctr,"%"), cex=0.8, col="grey40")
+```
+
+```{r}
+#| title: "ROAS by Channel — Red line marks the 3.5x efficiency threshold. Email well exceeds it."
+roas <- c(9.1, 3.81, 3.5)
+labs <- c("Email","Google Ads","Meta Ads")
+cols <- c("#3dbf8f","#4a90d9","#7b6bd6")
+bp4 <- barplot(roas, names.arg=labs, col=cols, border=NA,
+               ylim=c(0,11), axes=FALSE, cex.names=0.85)
+axis(2, at=0:11, labels=paste0(0:11,"x"), las=1, cex.axis=0.85)
+grid(nx=NA, ny=NULL, col="grey90", lty=1); box(col="grey90")
+abline(h=3.5, col="#e05c5c", lty=2, lwd=1.5)
+text(bp4, roas+0.3, paste0(roas,"x"), cex=0.8, col="grey40")
+```

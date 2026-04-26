@@ -1,0 +1,271 @@
+---
+title: "Analytics"
+format:
+  html:
+    toc: false
+    page-layout: full
+---
+
+```{=html}
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+.page{padding:1.5rem 0 3rem;}
+.hero{border-bottom:0.5px solid rgba(0,0,0,0.1);padding-bottom:1.25rem;margin-bottom:1.75rem;}
+.ana-label{font-size:11px;font-weight:600;letter-spacing:.09em;color:#888780;text-transform:uppercase;margin-bottom:.35rem;}
+.hero-title{font-size:28px;font-weight:600;color:#1a1a1a;margin-bottom:.3rem;}
+.hero-sub{font-size:13px;color:#5F5E5A;line-height:1.6;}
+.section{margin-bottom:2rem;}
+.section-head{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#888780;padding-bottom:.5rem;border-bottom:0.5px solid rgba(0,0,0,0.1);margin-bottom:1rem;}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:1.5rem;}
+.kpi{background:#F1EFE8;border-radius:8px;padding:.9rem 1rem;}
+.kpi-label{font-size:12px;color:#5F5E5A;margin-bottom:.3rem;}
+.kpi-val{font-size:24px;font-weight:600;color:#1a1a1a;}
+.kpi-delta{font-size:11px;margin-top:.2rem;}
+.delta-up{color:#0F6E56;}
+.delta-down{color:#993C1D;}
+.chart-card{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.25rem;}
+.chart-title{font-size:14px;font-weight:600;color:#1a1a1a;margin-bottom:.2rem;}
+.chart-sub{font-size:12px;color:#5F5E5A;margin-bottom:1rem;}
+.two-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-bottom:1rem;}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:.75rem;}
+.leg-item{display:flex;align-items:center;gap:5px;font-size:12px;color:#5F5E5A;}
+.leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+.insight-card{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.25rem;}
+.insight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;}
+.insight-tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;margin-bottom:.5rem;font-weight:500;}
+.tag-blue{background:#E6F1FB;color:#0C447C;}
+.tag-amber{background:#FAEEDA;color:#633806;}
+.tag-teal{background:#E1F5EE;color:#085041;}
+.tag-coral{background:#FAECE7;color:#712B13;}
+.insight-title{font-size:14px;font-weight:600;color:#1a1a1a;margin-bottom:.3rem;}
+.insight-body{font-size:13px;color:#5F5E5A;line-height:1.6;}
+.flow{display:flex;align-items:center;gap:0;flex-wrap:wrap;gap:4px;}
+.flow-step{background:#F1EFE8;border:0.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:.5rem .75rem;font-size:12px;font-weight:500;color:#1a1a1a;text-align:center;flex:1;min-width:100px;}
+.flow-arrow{font-size:14px;color:#B4B2A9;padding:0 2px;flex-shrink:0;}
+.funnel-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.funnel-label{font-size:12px;color:#5F5E5A;width:120px;flex-shrink:0;}
+.funnel-bar-wrap{flex:1;background:#F1EFE8;border-radius:4px;height:20px;overflow:hidden;}
+.funnel-bar{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:8px;}
+.funnel-pct{font-size:11px;font-weight:600;}
+</style>
+
+<div class="page">
+
+  <div class="hero">
+    <div class="ana-label">IBM3202 &middot; Portfolio Website</div>
+    <div class="hero-title">Analytics dashboard</div>
+    <div class="hero-sub">GA4 data &nbsp;&middot;&nbsp; Last 28 days &nbsp;&middot;&nbsp; Tracking: active &nbsp;&middot;&nbsp; Source: Google Analytics 4</div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">Key metrics</div>
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Active users</div>
+        <div class="kpi-val">39K</div>
+        <div class="kpi-delta delta-up">&#9650; +12% vs prior period</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">New users</div>
+        <div class="kpi-val">30K</div>
+        <div class="kpi-delta delta-up">&#9650; +8% vs prior period</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Items purchased</div>
+        <div class="kpi-val">13,230</div>
+        <div class="kpi-delta delta-down">&#9660; &minus;3% vs prior period</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Item revenue</div>
+        <div class="kpi-val">$144K</div>
+        <div class="kpi-delta delta-up">&#9650; +5% vs prior period</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">Traffic &amp; engagement</div>
+    <div class="two-col">
+      <div class="chart-card">
+        <div class="chart-title">Traffic by acquisition channel</div>
+        <div class="chart-sub">Sessions by source, last 28 days</div>
+        <div class="legend">
+          <span class="leg-item"><span class="leg-dot" style="background:#378ADD"></span>Organic search</span>
+          <span class="leg-item"><span class="leg-dot" style="background:#1D9E75"></span>Direct</span>
+          <span class="leg-item"><span class="leg-dot" style="background:#EF9F27"></span>Referral</span>
+          <span class="leg-item"><span class="leg-dot" style="background:#AFA9EC"></span>Social</span>
+        </div>
+        <div style="position:relative;width:100%;height:200px;">
+          <canvas id="acqChart" role="img" aria-label="Bar chart: Organic 18K, Direct 12K, Referral 6K, Social 3K sessions">Sessions by channel: Organic 18K, Direct 12K, Referral 6K, Social 3K.</canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">New vs returning users</div>
+        <div class="chart-sub">Engagement comparison, last 28 days</div>
+        <div class="legend">
+          <span class="leg-item"><span class="leg-dot" style="background:#378ADD"></span>New users &middot; 30K</span>
+          <span class="leg-item"><span class="leg-dot" style="background:#1D9E75"></span>Returning &middot; 9K</span>
+        </div>
+        <div style="position:relative;width:100%;height:200px;">
+          <canvas id="userChart" role="img" aria-label="Grouped bar chart comparing new and returning users on engaged sessions, session duration, and interactions">Returning users outperform new users across all three engagement metrics.</canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">Purchase funnel &mdash; web vs mobile</div>
+    <div class="chart-card">
+      <div class="chart-title">Funnel drop-off by platform</div>
+      <div class="chart-sub">Step completion rate starting from session start</div>
+      <div style="margin-top:.75rem;">
+        <div class="legend" style="margin-bottom:1rem;">
+          <span class="leg-item"><span class="leg-dot" style="background:#378ADD"></span>Web traffic</span>
+          <span class="leg-item"><span class="leg-dot" style="background:#AFA9EC"></span>Mobile traffic</span>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Session start</div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px;">
+            <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%;background:#378ADD;"><span class="funnel-pct" style="color:#E6F1FB">100%</span></div></div>
+            <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%;background:#AFA9EC;"><span class="funnel-pct" style="color:#26215C">100%</span></div></div>
+          </div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">View item</div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px;">
+            <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:25%;background:#378ADD;"><span class="funnel-pct" style="color:#E6F1FB">25%</span></div></div>
+            <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:14.5%;background:#AFA9EC;"><span class="funnel-pct" style="color:#26215C">14.5%</span></div></div>
+          </div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Add to cart</div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px;">
+            <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:25%;background:#378ADD;"><span class="funnel-pct" style="color:#E6F1FB">25%</span></div></div>
+            <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:19.7%;background:#AFA9EC;"><span class="funnel-pct" style="color:#26215C">19.7%</span></div></div>
+          </div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Begin checkout</div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px;">
+            <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:50%;background:#378ADD;"><span class="funnel-pct" style="color:#E6F1FB">50%</span></div></div>
+            <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:44.3%;background:#AFA9EC;"><span class="funnel-pct" style="color:#26215C">44.3%</span></div></div>
+          </div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label">Purchase</div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px;">
+            <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:49%;background:#378ADD;"><span class="funnel-pct" style="color:#E6F1FB">49%</span></div></div>
+            <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:27%;background:#AFA9EC;"><span class="funnel-pct" style="color:#26215C">27%</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">Insights &amp; recommendations</div>
+    <div class="insight-grid">
+      <div class="insight-card">
+        <span class="insight-tag tag-blue">Retention</span>
+        <div class="insight-title">Returning users drive engagement</div>
+        <div class="insight-body">Returning users generated more engaged sessions and stronger interaction metrics than new users. Brand familiarity increases both session duration and interaction rate.</div>
+      </div>
+      <div class="insight-card">
+        <span class="insight-tag tag-coral">Drop-off</span>
+        <div class="insight-title">Mobile funnel needs optimization</div>
+        <div class="insight-body">Mobile users drop off sharply at "View Item" (14.5% vs 25% web). A mobile-first landing page redesign could meaningfully increase conversion rate.</div>
+      </div>
+      <div class="insight-card">
+        <span class="insight-tag tag-amber">Opportunity</span>
+        <div class="insight-title">Cart abandonment gap</div>
+        <div class="insight-body">45K items added to cart but only 13K purchased — a 71% abandonment rate. Remarketing to cart abandoners within 7 days is the highest-leverage opportunity.</div>
+      </div>
+      <div class="insight-card">
+        <span class="insight-tag tag-teal">Integration</span>
+        <div class="insight-title">Google Ads + BigQuery next steps</div>
+        <div class="insight-body">Linking Google Ads to GA4 connects ad spend to real conversions. BigQuery export enables multi-session path analysis and custom attribution modeling.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">Measurement workflow</div>
+    <div class="flow">
+      <div class="flow-step">Data source<br><span style="font-size:11px;color:#888780;font-weight:400;">Website / App</span></div>
+      <div class="flow-arrow">&#8594;</div>
+      <div class="flow-step">GA4 events<br><span style="font-size:11px;color:#888780;font-weight:400;">Conversion tracking</span></div>
+      <div class="flow-arrow">&#8594;</div>
+      <div class="flow-step">Insight<br><span style="font-size:11px;color:#888780;font-weight:400;">Funnel drop-off</span></div>
+      <div class="flow-arrow">&#8594;</div>
+      <div class="flow-step">Action<br><span style="font-size:11px;color:#888780;font-weight:400;">Page redesign</span></div>
+      <div class="flow-arrow">&#8594;</div>
+      <div class="flow-step">Outcome<br><span style="font-size:11px;color:#888780;font-weight:400;">+Conversion rate</span></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+new Chart(document.getElementById('acqChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Organic search','Direct','Referral','Social'],
+    datasets: [{
+      label: 'Sessions',
+      data: [18000, 12000, 6000, 3000],
+      backgroundColor: ['#378ADD','#1D9E75','#EF9F27','#AFA9EC'],
+      borderRadius: 4,
+      borderSkipped: false
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ' ' + ctx.raw.toLocaleString() + ' sessions' } }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { color: '#888780', font: { size: 11 } } },
+      y: { grid: { color: 'rgba(0,0,0,0.06)' }, ticks: { color: '#888780', font: { size: 11 }, callback: v => (v/1000).toFixed(0)+'K' } }
+    }
+  }
+});
+
+new Chart(document.getElementById('userChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Engaged sessions','Avg session (min)','Interactions/user'],
+    datasets: [
+      {
+        label: 'New users',
+        data: [22000, 3.1, 4.2],
+        backgroundColor: '#378ADD',
+        borderRadius: 4,
+        borderSkipped: false
+      },
+      {
+        label: 'Returning users',
+        data: [28000, 5.8, 7.6],
+        backgroundColor: '#1D9E75',
+        borderRadius: 4,
+        borderSkipped: false
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ' ' + ctx.dataset.label + ': ' + ctx.raw.toLocaleString() } }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { color: '#888780', font: { size: 11 } } },
+      y: { grid: { color: 'rgba(0,0,0,0.06)' }, ticks: { color: '#888780', font: { size: 11 } } }
+    }
+  }
+});
+</script>
+```
