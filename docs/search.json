@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hello and Welcome, I’m Geovanni Flores!",
+    "section": "",
+    "text": "Currently I am a student at Cal Poly Pomona perusing my bachelors degree in business, majoring in marketing. I have gained experience through social media management, and now newly learned data analysis.\nFun fact: I have a passion in traveling and taking photos!"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Hello and Welcome, I’m Geovanni Flores!",
+    "section": "",
+    "text": "Currently I am a student at Cal Poly Pomona perusing my bachelors degree in business, majoring in marketing. I have gained experience through social media management, and now newly learned data analysis.\nFun fact: I have a passion in traveling and taking photos!"
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "Hello and Welcome, I’m Geovanni Flores!",
+    "section": "Skills",
+    "text": "Skills\n\nSocial Media Management (Instagram, TikTok, YouTube)\nR (Programming)\nEfficient in Microsoft (Word, PowerPoint and Excel)\nCanva"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Hello and Welcome, I’m Geovanni Flores!",
+    "section": "Education",
+    "text": "Education\nAssociate’s Degree | Rio Hondo College, 2021 - 2024\nBachelor’s Degree | Cal Poly Pomona, 2024 - 2026 (Projected)"
+  },
+  {
+    "objectID": "index.html#lets-connect",
+    "href": "index.html#lets-connect",
+    "title": "Hello and Welcome, I’m Geovanni Flores!",
+    "section": "Let’s Connect",
+    "text": "Let’s Connect\nEmail me here or connect with me on LinkedIn."
+  },
+  {
+    "objectID": "Analytics.html",
+    "href": "Analytics.html",
+    "title": "Analytics",
+    "section": "",
+    "text": "IBM3202 · Portfolio Website\n    Analytics dashboard\n    GA4 data  ·  Last 28 days  ·  Tracking: active  ·  Source: Google Analytics 4\n  \n\n  \n    Key metrics\n    \n      \n        Active users\n        39K\n        ▲ +12% vs prior period\n      \n      \n        New users\n        30K\n        ▲ +8% vs prior period\n      \n      \n        Items purchased\n        13,230\n        ▼ −3% vs prior period\n      \n      \n        Item revenue\n        $144K\n        ▲ +5% vs prior period\n      \n    \n  \n\n  \n    Traffic & engagement\n    \n      \n        Traffic by acquisition channel\n        Sessions by source, last 28 days\n        \n          Organic search\n          Direct\n          Referral\n          Social\n        \n        \n          Sessions by channel: Organic 18K, Direct 12K, Referral 6K, Social 3K.\n        \n      \n      \n        New vs returning users\n        Engagement comparison, last 28 days\n        \n          New users · 30K\n          Returning · 9K\n        \n        \n          Returning users outperform new users across all three engagement metrics.\n        \n      \n    \n  \n\n  \n    Purchase funnel — web vs mobile\n    \n      Funnel drop-off by platform\n      Step completion rate starting from session start\n      \n        \n          Web traffic\n          Mobile traffic\n        \n        \n          Session start\n          \n            100%\n            100%\n          \n        \n        \n          View item\n          \n            25%\n            14.5%\n          \n        \n        \n          Add to cart\n          \n            25%\n            19.7%\n          \n        \n        \n          Begin checkout\n          \n            50%\n            44.3%\n          \n        \n        \n          Purchase\n          \n            49%\n            27%\n          \n        \n      \n    \n  \n\n  \n    Insights & recommendations\n    \n      \n        Retention\n        Returning users drive engagement\n        Returning users generated more engaged sessions and stronger interaction metrics than new users. Brand familiarity increases both session duration and interaction rate.\n      \n      \n        Drop-off\n        Mobile funnel needs optimization\n        Mobile users drop off sharply at \"View Item\" (14.5% vs 25% web). A mobile-first landing page redesign could meaningfully increase conversion rate.\n      \n      \n        Opportunity\n        Cart abandonment gap\n        45K items added to cart but only 13K purchased — a 71% abandonment rate. Remarketing to cart abandoners within 7 days is the highest-leverage opportunity.\n      \n      \n        Integration\n        Google Ads + BigQuery next steps\n        Linking Google Ads to GA4 connects ad spend to real conversions. BigQuery export enables multi-session path analysis and custom attribution modeling.\n      \n    \n  \n\n  \n    Measurement workflow\n    \n      Data sourceWebsite / App\n      →\n      GA4 eventsConversion tracking\n      →\n      InsightFunnel drop-off\n      →\n      ActionPage redesign\n      →\n      Outcome+Conversion rate"
+  },
+  {
+    "objectID": "Marketing-Projects.html",
+    "href": "Marketing-Projects.html",
+    "title": "Marketing Projects",
+    "section": "",
+    "text": "📂 Marketing Projects\nA collection of academic and professional marketing work covering strategy, brand analysis, and presentations.\n\n\n\n  \n  \n    \n      🍎\n      Strategic Business Analysis on Apple\n    \n    \n      📄 PDF\n      \n        A comprehensive strategic business analysis of Apple Inc., examining market positioning, competitive advantage, and long-term growth strategy.\n      \n      \n        Brand Strategy\n        Competitive Analysis\n        Apple Inc.\n      \n      View Project →\n    \n  \n\n  \n  \n    \n      📰\n      Current Events Marketing Presentation\n    \n    \n      📊 PowerPoint\n      \n        A presentation analyzing current marketing trends and real-world business events, connecting classroom concepts to industry developments.\n      \n      \n        Current Events\n        Market Trends\n        IBM 3072\n      \n      View Project →\n    \n  \n\n  \n  \n    \n      📋\n      MHR3010 – Final Management Report on Apple Inc.\n    \n    \n      📄 PDF\n      \n        A formal management report produced for MHR3010 covering foundational marketing principles including consumer behavior, segmentation, and promotional strategy as applied to Apple Inc.\n      \n      \n        Consumer Behavior\n        Segmentation\n        MHR3010\n      \n      View Project →\n    \n  \n\n  \n  \n    \n      🏢\n      IBM Project – Target Market Plan (Part 1)\n    \n    \n      📝 Google Doc\n      \n        Part 1 of a Target Market Plan developed for Cal Poly Pomona's College of Business Administration, identifying and analyzing IBM's core customer segments and strategic market opportunities.\n      \n      \n        Target Market\n        IBM\n        Cal Poly Pomona\n        Market Segmentation\n      \n      View Project →\n    \n  \n\n  \n  \n    \n      🏢\n      IBM Project – Target Market Plan (Part 2)\n    \n    \n      📝 Google Doc\n      \n        Part 2 of the IBM Target Market Plan, expanding on customer segmentation with deeper analysis of positioning strategy, competitive landscape, and go-to-market recommendations.\n      \n      \n        Target Market\n        IBM\n        Cal Poly Pomona\n        Go-To-Market\n      \n      View Project →\n    \n  \n\n  \n  \n    \n      🏈\n      NFL – National Football League Marketing Analysis\n    \n    \n      📊 PowerPoint\n      \n        A marketing analysis and presentation on the National Football League, exploring brand strategy, fan engagement, sponsorship, and the NFL's broader marketing ecosystem.\n      \n      \n        NFL\n        Sports Marketing\n        Brand Analysis\n        Fan Engagement\n      \n      View Project →"
+  },
+  {
+    "objectID": "Dashboard.html",
+    "href": "Dashboard.html",
+    "title": "Dashboard",
+    "section": "",
+    "text": "$icon\n[1] \"cash-stack\"\n\n$color\n[1] \"#4a90d9\"\n\n$value\n[1] \"$48.2K\"\n\n\n\n\n$icon\n[1] \"graph-up-arrow\"\n\n$color\n[1] \"#3dbf8f\"\n\n$value\n[1] \"$183.6K\"\n\n\n\n\n$icon\n[1] \"bullseye\"\n\n$color\n[1] \"#e8a838\"\n\n$value\n[1] \"3.81x\"\n\n\n\n\n$icon\n[1] \"envelope-fill\"\n\n$color\n[1] \"#7b6bd6\"\n\n$value\n[1] \"Email 9.1x\""
+  },
+  {
+    "objectID": "Dashboard.html#row",
+    "href": "Dashboard.html#row",
+    "title": "Dashboard",
+    "section": "",
+    "text": "$icon\n[1] \"cash-stack\"\n\n$color\n[1] \"#4a90d9\"\n\n$value\n[1] \"$48.2K\"\n\n\n\n\n$icon\n[1] \"graph-up-arrow\"\n\n$color\n[1] \"#3dbf8f\"\n\n$value\n[1] \"$183.6K\"\n\n\n\n\n$icon\n[1] \"bullseye\"\n\n$color\n[1] \"#e8a838\"\n\n$value\n[1] \"3.81x\"\n\n\n\n\n$icon\n[1] \"envelope-fill\"\n\n$color\n[1] \"#7b6bd6\"\n\n$value\n[1] \"Email 9.1x\""
+  },
+  {
+    "objectID": "Dashboard.html#row-1",
+    "href": "Dashboard.html#row-1",
+    "title": "Dashboard",
+    "section": "Row",
+    "text": "Row\n\nQ1 2026 Campaign Overview — This dashboard analyzes digital marketing performance across Google Ads, Meta, Email, and SEO for Q1 2026. Total spend of $48.2K generated $183.6K in revenue, a blended ROAS of 3.81x. Email was the standout channel with a 9.1x return despite receiving only $4K in spend, while Google Ads drove the highest total revenue at $74.2K. These findings suggest reallocating budget toward email and optimizing Meta creative to improve overall portfolio efficiency."
+  },
+  {
+    "objectID": "Dashboard.html#row-2",
+    "href": "Dashboard.html#row-2",
+    "title": "Dashboard",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "Dashboard.html#row-3",
+    "href": "Dashboard.html#row-3",
+    "title": "Dashboard",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "Presentations.html",
+    "href": "Presentations.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "Group Project Proposal 1\n  Academic Characteristics\n  \n    An in-depth group analysis exploring key academic characteristics and patterns, presented collaboratively by Group 1.\n  \n  \n    🕐 April 2026\n    👥 Group 1 · Geovanni Flores\n    📄 RPubs · R Markdown\n  \n  \n    \n      View Presentation →\n    \n    \n      GitHub Repo →\n    \n  \n\n\n\n  \n    Type\n    Group Proposal\n  \n  \n    Tool\n    R Markdown\n  \n  \n    Platform\n    RPubs\n  \n  \n    Status\n    Published\n  \n\n\n\n\nWhat's Covered\n\n  Overview of academic characteristics within the dataset\n  Group research objectives and proposed methodology\n  Preliminary findings and data exploration\n  Next steps and project roadmap\n\n\n\n  \n    \n  \n  \n    GeoFlores03 / Group-Project-1\n    View source code, data, and files on GitHub\n  \n  →"
+  }
+]

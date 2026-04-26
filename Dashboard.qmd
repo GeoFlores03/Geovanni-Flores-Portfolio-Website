@@ -3,7 +3,7 @@ title: "Dashboard"
 format: dashboard
 ---
 
-## Row {height=25%}
+## Row {height="25%"}
 
 ```{r}
 #| content: valuebox
@@ -29,18 +29,18 @@ list(icon = "bullseye", color = "#e8a838", value = "3.81x")
 list(icon = "envelope-fill", color = "#7b6bd6", value = "Email 9.1x")
 ```
 
-## Row {height=10%}
+## Row {height="10%"}
 
 ```{r}
 #| echo: false
 cat("")
 ```
 
-::: {.card}
-**Q1 2026 Campaign Overview** — This dashboard analyzes digital marketing performance across Google Ads, Meta, Email, and SEO for Q1 2026. Total spend of $48.2K generated $183.6K in revenue, a blended ROAS of 3.81x. Email was the standout channel with a 9.1x return despite receiving only $4K in spend, while Google Ads drove the highest total revenue at $74.2K. These findings suggest reallocating budget toward email and optimizing Meta creative to improve overall portfolio efficiency.
+::: card
+**Q1 2026 Campaign Overview** — This dashboard analyzes digital marketing performance across Google Ads, Meta, Email, and SEO for Q1 2026. Total spend of \$48.2K generated \$183.6K in revenue, a blended ROAS of 3.81x. Email was the standout channel with a 9.1x return despite receiving only \$4K in spend, while Google Ads drove the highest total revenue at \$74.2K. These findings suggest reallocating budget toward email and optimizing Meta creative to improve overall portfolio efficiency.
 :::
 
-## Row {height=32%}
+## Row {height="32%"}
 
 ```{r}
 #| title: "Monthly Spend vs Revenue — Revenue grew faster than spend each month, widening the gap through March."
@@ -69,7 +69,7 @@ grid(nx=NA, ny=NULL, col="grey90", lty=1); box(col="grey90")
 text(bp, rev_vals+2000, paste0("$",rev_vals/1000,"K"), cex=0.8, col="grey40")
 ```
 
-## Row {height=33%}
+## Row {height="33%"}
 
 ```{r}
 #| title: "CTR by Channel — Email's 24.1% CTR far outpaced paid channels, reflecting strong list quality."
