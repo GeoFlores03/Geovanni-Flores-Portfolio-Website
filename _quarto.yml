@@ -20,6 +20,16 @@ website:
         
 format:
   html:
+    include-in-header:
+      - text: |
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETWD1PR7BX"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ETWD1PR7BX');
+          </script>
+
     theme: cosmo
     css: styles.css
     toc: true
