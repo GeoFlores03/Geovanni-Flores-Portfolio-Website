@@ -224,18 +224,18 @@ title: "Presentations"
 </style>
 
 <div class="pres-hero">
-  <div class="pres-hero-tag">Group Project Proposal 1</div>
-  <h2>Academic Characteristics</h2>
+  <div class="pres-hero-tag">Final Project Presentation</div>
+  <h2>Final Project Presentation</h2>
   <p class="pres-hero-sub">
-    An in-depth group analysis exploring key academic characteristics and patterns, presented collaboratively by Group 1.
+    A comprehensive final project presentation by Geovanni Flores, published on RPubs.
   </p>
   <div class="pres-meta-row">
-    <span class="pres-meta-chip">🕐 April 2026</span>
-    <span class="pres-meta-chip">👥 Group 1 · Geovanni Flores</span>
+    <span class="pres-meta-chip">🕐 May 2026</span>
+    <span class="pres-meta-chip">👥 Geovanni Flores</span>
     <span class="pres-meta-chip">📄 RPubs · R Markdown</span>
   </div>
   <div class="pres-btn-row">
-    <a class="pres-cta" href="https://rpubs.com/GeovanniF/1418238" target="_blank">
+    <a class="pres-cta" href="https://rpubs.com/GeovanniF03/1428948" target="_blank">
       View Presentation →
     </a>
     <a class="pres-cta-ghost" href="https://github.com/GeoFlores03/Group-Project-1" target="_blank">
@@ -247,7 +247,7 @@ title: "Presentations"
 <div class="pres-details-grid">
   <div class="pres-detail-card">
     <div class="pres-detail-label">Type</div>
-    <div class="pres-detail-value">Group Proposal</div>
+    <div class="pres-detail-value">Final Presentation</div>
   </div>
   <div class="pres-detail-card">
     <div class="pres-detail-label">Tool</div>
