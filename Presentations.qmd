@@ -2,6 +2,4 @@
 title: "Presentations"
 ---
 
-```{=html}
 Coming soon!
-```

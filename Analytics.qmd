@@ -1,11 +1,192 @@
 ---
 title: "Analytics"
-format:
-  html:
-    toc: false
-    page-layout: full
+format: html
+execute:
+  echo: false
+  warning: false
 ---
 
-```{=html}
-Coming soon!
+## About This Page
+
+This page offers a transparent look at how visitors engage with my portfolio. Rather than keeping website metrics behind closed doors, I believe in open data — it reflects both my interest in analytics and my commitment to honest communication.
+
+All data is sourced from **Google Analytics 4** and represents the **last 7 days**. Everything shown here is fully aggregated. No personally identifiable information (PII) is collected, stored, or displayed — only anonymised patterns across all visitors combined.
+
+---
+
+## Snapshot: Last 7 Days
+
+These four numbers give a quick pulse on recent site activity. The strong growth percentages reflect a recent uptick in traffic, likely driven by sharing the portfolio more actively across professional networks.
+
+```{r}
+library(ggplot2)
+library(scales)
+library(gridExtra)
+library(grid)
+
+blue      <- "#378ADD"
+blue_lt   <- "#B5D4F4"
+teal      <- "#1D9E75"
+purple    <- "#7F77DD"
+amber     <- "#EF9F27"
+coral     <- "#D85A30"
+bg        <- "#FFFFFF"
+bg2       <- "#F6F6F4"
+text_dark <- "#1A1A1A"
+text_mid  <- "#6B6B66"
+border    <- "#E0DED8"
+
+base_theme <- theme_minimal(base_family = "sans") +
+  theme(
+    plot.background  = element_rect(fill = bg,  color = NA),
+    panel.background = element_rect(fill = bg2, color = NA),
+    panel.grid.major = element_line(color = border, linewidth = 0.4),
+    panel.grid.minor = element_blank(),
+    axis.text        = element_text(color = text_mid, size = 9),
+    axis.title       = element_blank(),
+    plot.title       = element_text(color = text_dark, size = 11,
+                                    face = "bold", margin = margin(b = 4)),
+    plot.subtitle    = element_text(color = text_mid, size = 9,
+                                    margin = margin(b = 8)),
+    plot.margin      = margin(12, 14, 12, 14),
+    legend.position  = "bottom",
+    legend.text      = element_text(color = text_mid, size = 8),
+    legend.key.size  = unit(0.5, "lines")
+  )
+
+metrics_df <- data.frame(
+  Metric = c("Active Users", "New Users", "Page Views", "Avg. Session"),
+  Value  = c("~40", "38", "176", "1m 42s"),
+  Change = c("+188.9%", "+177.8%", "+158.8%", "Growing")
+)
+
+p_metrics <- tableGrob(
+  metrics_df,
+  rows  = NULL,
+  theme = ttheme_minimal(
+    core    = list(fg_params = list(col = text_dark, fontsize = 10,
+                                   hjust = 0, x = 0.05)),
+    colhead = list(fg_params = list(col = text_mid, fontsize = 10,
+                                   fontface = "bold", hjust = 0, x = 0.05))
+  )
+)
+
+grid.newpage()
+grid.draw(p_metrics)
 ```
+
+---
+
+## Visitor Trend
+
+The chart below tracks daily unique visitors over the past week, compared against the previous period. The upward curve shows consistent growth day-over-day, with traffic nearly tripling by the end of the window.
+
+```{r}
+days <- c("Apr 29","Apr 30","May 1","May 2","May 3","May 4","May 5")
+visits <- data.frame(
+  day  = factor(days, levels = days),
+  week = c(4, 5, 6, 7, 8, 10, 12),
+  prev = c(2, 2, 3, 2, 3,  3,  4)
+)
+
+ggplot(visits, aes(x = day)) +
+  geom_ribbon(aes(ymin = 0, ymax = week, group = 1), fill = blue, alpha = 0.10) +
+  geom_line(aes(y = prev, group = 1, colour = "Previous period",
+                linetype = "Previous period"), linewidth = 1) +
+  geom_line(aes(y = week, group = 1, colour = "This week",
+                linetype = "This week"), linewidth = 1.5) +
+  geom_point(aes(y = week), colour = blue, size = 2.5) +
+  scale_colour_manual(NULL, values = c("This week" = blue, "Previous period" = blue_lt)) +
+  scale_linetype_manual(NULL, values = c("This week" = "solid", "Previous period" = "dashed")) +
+  scale_y_continuous(breaks = seq(0, 14, 2), limits = c(0, 14)) +
+  labs(title    = "Daily visitors — last 7 days",
+       subtitle = "Solid line = this week  |  Dashed = previous period") +
+  base_theme +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+```
+
+---
+
+## Where Visitors Are Going
+
+The home page naturally leads in views as the entry point for most visitors. The strong showing for **Marketing Projects** suggests that recruiters and collaborators are actively browsing project work — which is exactly what this portfolio is designed for.
+
+```{r}
+pages <- data.frame(
+  page  = factor(
+    c("Home","Marketing Projects","Presentations","Dashboard","Analytics"),
+    levels = rev(c("Home","Marketing Projects","Presentations","Dashboard","Analytics"))
+  ),
+  views = c(35, 8, 5, 4, 4)
+)
+
+ggplot(pages, aes(x = views, y = page)) +
+  geom_col(fill = blue, width = 0.6) +
+  geom_text(aes(label = views), hjust = -0.3,
+            colour = text_dark, size = 3.5, fontface = "bold") +
+  scale_x_continuous(limits = c(0, 42), expand = c(0, 0)) +
+  labs(title    = "Top pages by views",
+       subtitle = "Total page views in the last 7 days") +
+  base_theme +
+  theme(panel.grid.major.y = element_blank())
+```
+
+---
+
+## Global Reach
+
+Traffic is coming from **7 countries**, with the United States making up the majority of visits. The presence of visitors from South Korea, France, India, Italy, and Taiwan suggests the portfolio is reaching an international audience — something I'm actively working to grow.
+
+```{r}
+countries <- data.frame(
+  country = factor(
+    c("United States","South Korea","France","India","Italy","Taiwan"),
+    levels = rev(c("United States","South Korea","France","India","Italy","Taiwan"))
+  ),
+  users = c(20, 2, 1, 1, 1, 1)
+)
+
+ggplot(countries, aes(x = users, y = country)) +
+  geom_col(fill = teal, width = 0.6) +
+  geom_text(aes(label = users), hjust = -0.3,
+            colour = text_dark, size = 3.5, fontface = "bold") +
+  scale_x_continuous(limits = c(0, 24), expand = c(0, 0)) +
+  labs(title    = "Active users by country",
+       subtitle = "Aggregated country-level data only — no personal data collected") +
+  base_theme +
+  theme(panel.grid.major.y = element_blank())
+```
+
+---
+
+## How People Engage
+
+Beyond just page views, GA4 tracks behavioural signals. **Scroll events** (22) show visitors are reading content rather than bouncing immediately. **User engagement** events (16) confirm meaningful time is being spent on pages. The low click count (4) is something to watch — it may point to an opportunity to add clearer calls to action.
+
+```{r}
+events <- data.frame(
+  event  = factor(c("Page view","Scroll","Engagement","Click","Session start"),
+                  levels = c("Page view","Scroll","Engagement","Click","Session start")),
+  count  = c(30, 22, 16, 4, 1),
+  colour = c(blue, teal, purple, amber, coral)
+)
+
+ggplot(events, aes(x = event, y = count, fill = event)) +
+  geom_col(width = 0.6, show.legend = FALSE) +
+  geom_text(aes(label = count), vjust = -0.4,
+            colour = text_dark, size = 3.5, fontface = "bold") +
+  scale_fill_manual(values = setNames(events$colour, events$event)) +
+  scale_y_continuous(limits = c(0, 36), expand = c(0, 0)) +
+  labs(title    = "Engagement events — realtime snapshot",
+       subtitle = "Event types fired across all sessions") +
+  base_theme +
+  theme(panel.grid.major.x = element_blank())
+```
+
+---
+
+## Privacy & Data Use
+
+> All analytics on this page are collected through **Google Analytics 4** using anonymised, aggregated data only. No cookies that identify individual users are used. IP addresses are anonymised at collection. No data is sold or shared with third parties. This page is intended purely for transparency and to demonstrate real-world analytics skills.
+
+*Last updated: May 2026*
