@@ -60,6 +60,7 @@ title: "Marketing Projects"
 .badge-pdf  { background: #fff0f0; color: #c0392b; }
 .badge-pptx { background: #fff4e6; color: #d35400; }
 .badge-gdoc { background: #e8f5e9; color: #2e7d32; }
+.badge-qmd  { background: #e8f0ff; color: #1a56db; }
 
 .card-header {
   background: linear-gradient(135deg, #1a2a4a 0%, #1a56db 100%);
@@ -255,6 +256,48 @@ title: "Marketing Projects"
         <span class="tag">Fan Engagement</span>
       </div>
       <a class="card-link" href="marketing-projects/NFL-Presenation-GeovanniF.pptx" target="_blank">View Project →</a>
+    </div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="project-card">
+    <div class="card-header">
+      <div class="card-icon">🧹</div>
+      <p class="card-title">M06 Reflection Essay – Advanced Data Wrangling</p>
+    </div>
+    <div class="card-body">
+      <span class="card-badge badge-qmd">📘 Quarto</span>
+      <p class="card-description">
+        A reflection essay exploring advanced Tidyverse wrangling techniques including across(), rowwise(), anti_join(), and factor handling. Covers David Robinson's live screencast analysis and a Revealjs presentation on portfolio construction.
+      </p>
+      <div class="card-tags">
+        <span class="tag">Tidyverse</span>
+        <span class="tag">Data Wrangling</span>
+        <span class="tag">R / Quarto</span>
+        <span class="tag">Reflection</span>
+      </div>
+      <a class="card-link" href="https://geoflores03.github.io/Flores-Geovanni-M06-Reflection-Essay-Adv-Data-Wrangling.qmd/" target="_blank">View Project →</a>
+    </div>
+  </div>
+
+  <!-- Card 8 -->
+  <div class="project-card">
+    <div class="card-header">
+      <div class="card-icon">⚙️</div>
+      <p class="card-title">M11 Application – Introduction to Functional Programming in R</p>
+    </div>
+    <div class="card-body">
+      <span class="card-badge badge-qmd">📘 Quarto</span>
+      <p class="card-description">
+        A hands-on R programming application covering functional programming concepts including conditional logic, loops, custom functions, apply/map families, and data visualization using real-world student-teacher ratio data.
+      </p>
+      <div class="card-tags">
+        <span class="tag">Functional Programming</span>
+        <span class="tag">R / Quarto</span>
+        <span class="tag">purrr</span>
+        <span class="tag">ggplot2</span>
+      </div>
+      <a class="card-link" href="https://geoflores03.github.io/Flores--Geovanni-M11-2-Application-R_Programming.qmd/" target="_blank">View Project →</a>
     </div>
   </div>
 
