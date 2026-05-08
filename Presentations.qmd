@@ -1,5 +1,237 @@
 ---
 title: "Presentations"
+engine: knitr
 ---
 
-Coming soon!
+---
+title: "Presentations"
+engine: knitr
+---
+
+```{=html}
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap');
+
+  .pres-hero {
+    background: linear-gradient(135deg, #0038A8 0%, #001f6b 60%, #000d3a 100%);
+    border-radius: 20px;
+    padding: 3.5rem 3rem 3rem;
+    margin: 1.5rem 0 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .pres-hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .pres-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 30px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .pres-hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: #a8c4ff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.2);
+    margin-bottom: 1.2rem;
+  }
+  .pres-hero h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0 0 0.75rem;
+    line-height: 1.15;
+  }
+  .pres-hero-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    margin-bottom: 2.2rem;
+    line-height: 1.6;
+    max-width: 480px;
+  }
+  .pres-meta-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .pres-meta-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.7);
+  }
+  .pres-btn-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .pres-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #ffffff;
+    color: #0038A8;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.75rem 1.6rem;
+    border-radius: 100px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  }
+  .pres-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+    text-decoration: none;
+    color: #0038A8;
+  }
+  .pres-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .pres-detail-card {
+    background: #f7f8fc;
+    border: 1px solid #e4e8f5;
+    border-radius: 14px;
+    padding: 1.2rem 1.3rem;
+  }
+  .pres-detail-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7a85a3;
+    margin-bottom: 0.4rem;
+  }
+  .pres-detail-value {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1a2040;
+  }
+  .pres-section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #7a85a3;
+    margin: 2.5rem 0 1rem;
+  }
+  .pres-topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .pres-topic-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #2a3050;
+  }
+  .pres-bullet {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #0038A8;
+    flex-shrink: 0;
+  }
+  .pres-divider {
+    border: none;
+    border-top: 1px solid #e4e8f5;
+    margin: 2rem 0;
+  }
+  .pres-body-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.97rem;
+    color: #3a4060;
+    line-height: 1.75;
+    margin: 0 0 1.2rem;
+  }
+</style>
+
+<div class="pres-hero">
+  <div class="pres-hero-tag">Campaign Performance Presentation</div>
+  <h2>Q1 2026 Campaign Performance Overview</h2>
+  <p class="pres-hero-sub">
+    A data-driven look at marketing campaign performance across Q1 2026 — analyzing key metrics, channel results, and strategic takeaways by Geovanni Flores.
+  </p>
+  <div class="pres-meta-row">
+    <span class="pres-meta-chip">🕐 May 2026</span>
+    <span class="pres-meta-chip">👥 Geovanni Flores</span>
+    <span class="pres-meta-chip">📄 Reveal.js · GitHub Pages</span>
+  </div>
+  <div class="pres-btn-row">
+    <a class="pres-cta" href="https://geoflores03.github.io/New/#/title-slide" target="_blank">
+      View Full Presentation →
+    </a>
+  </div>
+</div>
+
+<div class="pres-details-grid">
+  <div class="pres-detail-card">
+    <div class="pres-detail-label">Type</div>
+    <div class="pres-detail-value">Campaign Report</div>
+  </div>
+  <div class="pres-detail-card">
+    <div class="pres-detail-label">Tool</div>
+    <div class="pres-detail-value">Reveal.js</div>
+  </div>
+  <div class="pres-detail-card">
+    <div class="pres-detail-label">Platform</div>
+    <div class="pres-detail-value">GitHub Pages</div>
+  </div>
+  <div class="pres-detail-card">
+    <div class="pres-detail-label">Quarter</div>
+    <div class="pres-detail-value">Q1 2026</div>
+  </div>
+</div>
+
+<hr class="pres-divider">
+
+<p class="pres-body-text">
+  This presentation delivers a comprehensive review of marketing campaign performance throughout Q1 2026. Using data collected across multiple channels, the analysis identifies which campaigns drove the most engagement, where budget was most efficiently allocated, and how results compared against quarterly targets.
+</p>
+<p class="pres-body-text">
+  The findings inform a set of strategic recommendations designed to sharpen campaign execution heading into Q2, with a focus on optimizing high-performing channels and reallocating resources away from underperforming ones.
+</p>
+
+<p class="pres-section-label">What's Covered</p>
+<ul class="pres-topic-list">
+  <li><span class="pres-bullet"></span>Q1 2026 campaign performance metrics and KPIs</li>
+  <li><span class="pres-bullet"></span>Channel-by-channel breakdown and analysis</li>
+  <li><span class="pres-bullet"></span>Key wins, challenges, and insights</li>
+  <li><span class="pres-bullet"></span>Recommendations and roadmap for Q2 2026</li>
+</ul>
+
+<hr class="pres-divider">
+```
