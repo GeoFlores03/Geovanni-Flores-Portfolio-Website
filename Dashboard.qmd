@@ -95,3 +95,5 @@ grid(nx=NA, ny=NULL, col="grey90", lty=1); box(col="grey90")
 abline(h=3.5, col="#e05c5c", lty=2, lwd=1.5)
 text(bp4, roas+0.3, paste0(roas,"x"), cex=0.8, col="grey40")
 ```
+
+> **Note:** All data is simulated for portfolio demonstration purposes only.
